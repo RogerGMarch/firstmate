@@ -1,0 +1,11 @@
+.git
+.venv
+.env
+data
+notebooks
+reports
+tests
+scripts
+.agents
+.github
+__pycache__

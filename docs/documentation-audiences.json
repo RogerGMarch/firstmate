@@ -36,7 +36,8 @@
     "docs/t3code-backend.md",
     "docs/tern-backend.md",
     "docs/hc-backend.md",
-    "docs/remote-secondmates.md"
+    "docs/remote-secondmates.md",
+    "profiles/python-research/README.md"
   ],
   "requiredOwnerPointers": [
     {
@@ -691,6 +692,26 @@
     },
     {
       "path": ".agents/skills/validation-supervision/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
+      "path": "profiles/python-research/README.md",
+      "audience": "operator-current"
+    },
+    {
+      "path": "profiles/python-research/{{cookiecutter.project_slug}}/README.md",
+      "audience": "operator-example"
+    },
+    {
+      "path": "profiles/python-research/{{cookiecutter.project_slug}}/AGENTS.md",
+      "audience": "operator-example"
+    },
+    {
+      "path": "profiles/python-research/{{cookiecutter.project_slug}}/.agents/skills/research-code-quality/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
+      "path": "profiles/python-research/{{cookiecutter.project_slug}}/.agents/skills/scientific-quality/SKILL.md",
       "audience": "agent-runtime"
     }
   ]

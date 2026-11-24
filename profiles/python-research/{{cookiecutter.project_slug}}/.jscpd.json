@@ -1,0 +1,7 @@
+{
+  "format": ["python"],
+  "mode": "mild",
+  "minLines": 5,
+  "minTokens": 50,
+  "reporters": ["console"]
+}

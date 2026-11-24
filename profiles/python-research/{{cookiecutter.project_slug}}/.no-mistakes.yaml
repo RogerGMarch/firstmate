@@ -1,0 +1,44 @@
+# Install this on the default branch before relying on its trusted settings.
+allow_repo_commands: false
+
+commands:
+  lint: make lint
+
+test:
+  instructions: |
+    Drive the smallest user-visible scenario that validates this change.
+    Use make run for the synthetic example and targeted fast fixtures for changed behavior.
+    Full scientific runs require the documented data, inputs, and available resources.
+    Report untested scientific scenarios and what they need.
+
+review:
+  path_instructions:
+    - path: "**"
+      instructions: |
+        For Python code, architecture, or check changes, read the trusted research-code-quality
+        skill with git show refs/remotes/origin/main:.agents/skills/research-code-quality/SKILL.md.
+        For changes to data, methods, experiments, evaluation, or reported findings, read the
+        trusted scientific-quality skill at the same ref under .agents/skills/scientific-quality/SKILL.md.
+        Raise ask-user for unresolved scientific decisions or proposed weakening of assertions,
+        test selection, suppressions, import contracts, or gate enforcement.
+
+gates:
+  - name: python-research
+    after: lint
+    command: make typecheck architecture test regression
+
+ci:
+  revalidate_repairs: true
+
+protected_paths:
+  - ".agents/**"
+  - ".github/**"
+  - ".jscpd.json"
+  - ".no-mistakes.yaml"
+  - ".python-version"
+  - "AGENTS.md"
+  - "Makefile"
+  - "pyproject.toml"
+  - "scripts/**"
+  - "tests/**"
+  - "uv.lock"

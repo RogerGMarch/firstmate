@@ -1,0 +1,7 @@
+{
+  "project_name": "Research Project",
+  "project_slug": "{{ cookiecutter.project_name | lower | replace(' ', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug | replace('-', '_') }}",
+  "quality_owner": "CHANGE_ME",
+  "_copy_without_render": [".github/workflows/*.yml", "scripts/check_complexity.py"]
+}

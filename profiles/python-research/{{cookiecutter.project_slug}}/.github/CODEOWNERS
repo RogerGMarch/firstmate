@@ -1,0 +1,14 @@
+# Set a maintainer with write access and require code-owner approval on main.
+{% if cookiecutter.quality_owner != "CHANGE_ME" -%}
+/.agents/ {{ cookiecutter.quality_owner }}
+/.github/ {{ cookiecutter.quality_owner }}
+/.jscpd.json {{ cookiecutter.quality_owner }}
+/.no-mistakes.yaml {{ cookiecutter.quality_owner }}
+/.python-version {{ cookiecutter.quality_owner }}
+/AGENTS.md {{ cookiecutter.quality_owner }}
+/Makefile {{ cookiecutter.quality_owner }}
+/pyproject.toml {{ cookiecutter.quality_owner }}
+/scripts/ {{ cookiecutter.quality_owner }}
+/tests/ {{ cookiecutter.quality_owner }}
+/uv.lock {{ cookiecutter.quality_owner }}
+{% endif %}
